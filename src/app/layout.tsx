@@ -4,6 +4,8 @@ import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import routerProvider from "@refinedev/nextjs-router";
 import { Metadata } from "next";
 import React, { Suspense } from "react";
+import { SidebarProvider, SidebarTrigger } from "@components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 import { dataProvider } from "@providers/data-provider";
 import "@styles/global.css";
@@ -38,7 +40,13 @@ export default function RootLayout({
                   projectId: "BEt9r2-lLCwHv-g97Lvx",
                 }}
               >
-                {children}
+                <SidebarProvider>
+                  <AppSidebar />
+                  <main>
+                    <SidebarTrigger />
+                    {children}
+                  </main>
+                </SidebarProvider>
                 <RefineKbar />
               </Refine>
             </DevtoolsProvider>
