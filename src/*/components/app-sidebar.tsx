@@ -41,9 +41,9 @@ const items = [
 ]
 
 export function AppSidebar() {
-  console.log("AppSidebar is rendering!");
+  
   return (
-    <Sidebar>
+    <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
