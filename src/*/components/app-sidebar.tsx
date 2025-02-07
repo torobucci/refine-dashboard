@@ -9,7 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+} from "@*/components/ui/sidebar"
 
 // Menu items.
 const items = [
@@ -41,6 +41,7 @@ const items = [
 ]
 
 export function AppSidebar() {
+  console.log("AppSidebar is rendering!");
   return (
     <Sidebar>
       <SidebarContent>
